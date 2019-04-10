@@ -16,6 +16,7 @@ export const requestArticles = () => {
 }
 
 export default function (state = initialState, action) {
+  // REMEMBER: this takes in action.TYPE, not .payload
   switch (action.type) {
     case REQUEST_ARTICLES + '_PENDING':
       return { ...state, loading: true };
